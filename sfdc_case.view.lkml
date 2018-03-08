@@ -15,18 +15,6 @@ view: sfdc_case {
     type: string
     sql: ${TABLE}.AREA_C ;;
   }
-  dimension_group: Case_closed {
-    type: time
-    timeframes: [raw,date,week,month,quarter,year]
-    sql: ${TABLE}.APP_CLOSED_DATE ;;
-  }
-
-  dimension_group: Case_created {
-    type: time
-    timeframes: [raw,date,week,month,quarter,year]
-    sql: ${TABLE}.APP_CREATED_DATE ;;
-  }
-
   dimension: case_number {
     type: string
     sql: ${TABLE}.CASE_NUMBER ;;
@@ -39,7 +27,6 @@ view: sfdc_case {
 
   dimension_group: closed_date {
     type: time
-    hidden: yes
     timeframes: [raw,date,week,month,quarter,year]
     sql: ${TABLE}.CLOSED_DATE ;;
   }
@@ -69,7 +56,6 @@ view: sfdc_case {
 
   dimension_group: created_date {
     type: time
-    hidden: yes
     timeframes: [raw,date,week,month,quarter,year]
     sql: ${TABLE}.CREATED_DATE ;;
   }

@@ -19,15 +19,8 @@ view: sfdc_case_history {
 
   dimension_group: created_date {
     type: time
-    hidden: yes
     timeframes: [raw,date,week,month,quarter,year]
     sql: ${TABLE}.CREATED_DATE ;;
-  }
-
-  dimension_group: created {
-    type: time
-    timeframes: [raw,date,week,month,quarter,year]
-    sql: ${TABLE}.APP_CREATED_DATE ;;
   }
 
   dimension: field {

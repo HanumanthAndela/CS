@@ -60,12 +60,6 @@ view: sfdc_account {
     sql: ${TABLE}.ANNUAL_REVENUE ;;
   }
 
-  dimension_group: Account_created {
-    type: time
-    timeframes: [raw,date,week,month,quarter,year]
-    sql: ${TABLE}.APP_CREATED_DATE ;;
-  }
-
   dimension: arch_industry_c {
     type: string
     sql: ${TABLE}.ARCH_INDUSTRY_C ;;
@@ -168,7 +162,6 @@ view: sfdc_account {
 
   dimension: created_date {
     type: string
-    hidden: yes
     sql: ${TABLE}.CREATED_DATE ;;
   }
 
